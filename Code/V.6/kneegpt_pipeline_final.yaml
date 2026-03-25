@@ -1,18 +1,18 @@
 project:
   name: KneeGPT_MIUA_final
-  root_dir: D:\Knee_GPT\kneegpt_pipeline_final
+  root_dir: .
   seed: 42
   device: cuda
 
 paths:
-  train_csv: D:\Knee_GPT\kneegpt_pipeline_final\train_with_bmi.csv
-  val_csv: D:\Knee_GPT\kneegpt_pipeline_final\val_with_bmi.csv
-  test_csv: D:\Knee_GPT\kneegpt_pipeline_final\test_with_bmi.csv
+  train_csv: ./train_with_bmi.csv
+  val_csv: ./val_with_bmi.csv
+  test_csv: ./test_with_bmi.csv
 
 scripts:
-  stage1: D:\Knee_GPT\kneegpt_pipeline_final\stage1_pretrain_kl_v1.py
-  stage2: D:\Knee_GPT\kneegpt_pipeline_final\stage2_train_binary_v1.py
-  stage3: D:\Knee_GPT\kneegpt_pipeline_final\stage3_kneegpt_reliability_v1.py
+  stage1: ./stage1_pretrain_kl_v1.py
+  stage2: ./stage2_train_binary_v1.py
+  stage3: ./stage3_kneegpt_reliability_v1.py
 
 metadata:
   use_metadata_options: [false, true]
@@ -28,7 +28,7 @@ backbones:
 
 stage1:
   enabled: true
-  out_root: D:\Knee_GPT\kneegpt_pipeline_final\outputs\stage1
+  out_root: ./outputs/stage1
   epochs: 20
   batch_size: 16
   num_workers: 4
@@ -42,11 +42,12 @@ stage1:
 
 stage2:
   enabled: true
-  out_root: D:\Knee_GPT\kneegpt_pipeline_final\outputs\stage2
+  out_root: ./outputs/stage2
   binary_threshold: 2
   train_modes: [frozen, finetuned]
   train_fractions: [0.2, 0.5, 1.0]
   init_from_stage1: true
+  init_from_stage1_options: [false, true]
   epochs: 20
   batch_size: 16
   num_workers: 4
@@ -62,7 +63,7 @@ stage2:
 
 stage3:
   enabled: true
-  out_root: D:\Knee_GPT\kneegpt_pipeline_final\outputs\stage3
+  out_root: ./outputs/stage3
   run_for_best_per_group: true
   best_groups:
     - metadata_mode
@@ -80,7 +81,7 @@ stage3:
     secondary_hex: '#1F2A44'
 
 outputs:
-  master_dir: D:\Knee_GPT\kneegpt_pipeline_final\outputs
+  master_dir: ./outputs
   save_master_summary: true
   save_best_model_index: true
   master_summary_filename: master_pipeline_summary.csv
