@@ -84,7 +84,7 @@ To systematically evaluate model generalizability under realistic clinical scena
 
 
 
-## Dataset
+### Dataset
 
 <p align="justify">
 
@@ -95,11 +95,11 @@ This study utilizes plain knee radiographs obtained from the Osteoarthritis Init
 
 
 
-## Publications
+### Publications
 
 
 
-## Acknowledgments
+### Acknowledgments
 
 
 
