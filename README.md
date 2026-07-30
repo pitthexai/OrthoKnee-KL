@@ -18,11 +18,9 @@
 
 <p align="justify">
 
-This GitHub repository contains the complete implementation accompanying our study on data-efficient and trustworthy adaptation of pretrained Vision Foundation Models (VFMs) for automated knee osteoarthritis (OA) classification from plain radiographs.
-
-The repository provides a fully reproducible experimental framework for evaluating the transferability of pretrained foundation models to musculoskeletal imaging under different adaptation strategies, supervision regimes, and input modalities. Specifically, we investigate CLIP and DINOv2 as pretrained image encoders, comparing frozen feature extraction and end-to-end fine-tuning using both radiograph-only and multimodal (radiograph + clinical metadata) learning.
-
-Beyond conventional classification performance, this repository includes comprehensive trustworthy AI analyses, including predictive uncertainty estimation, calibration assessment, risk-coverage analysis, bootstrap confidence intervals, and feature embedding visualization to facilitate reliable and clinically meaningful AI-assisted knee OA assessment.
+This GitHub repository contains the official implementation accompanying our study on the data-efficient and trustworthy adaptation of Vision Foundation Models for knee osteoarthritis (OA) classification from plain radiographs.
+We present a systematic and reproducible evaluation of adaptation strategies for Vision Foundation Models using 8,950 radiographs from the Osteoarthritis Initiative (OAI). Specifically, we investigate two state-of-the-art pretrained encoders, CLIP and DINOv2, within a unified experimental framework that evaluates (1) data modality (radiographs alone versus radiographs augmented with clinical metadata), (2) adaptation strategy (frozen feature extraction versus end-to-end fine-tuning), and (3) supervision regime (entire-data versus limited-data).
+Beyond standard classification metrics, the repository includes calibration, uncertainty, and risk-aware selective prediction analyses, providing a reproducible framework for the data-efficient and trustworthy deployment of Vision Foundation Models in musculoskeletal imaging.
 
 </p>
 
