@@ -30,18 +30,13 @@ Beyond conventional classification performance, this repository includes compreh
 
 ### Highlights
 
-- Evaluation of pretrained Vision Foundation Models for knee OA classification.
-- Comparison of CLIP and DINOv2 pretrained encoders.
-- Frozen feature extraction versus end-to-end fine-tuning.
-- Image-only and multimodal learning with clinical metadata.
-- Entire-data and limited-data experimental settings.
-- Validation-based model selection.
-- Comprehensive trustworthy AI evaluation.
-- Predictive uncertainty estimation using Monte Carlo Dropout.
-- Calibration analysis and reliability assessment.
-- Risk-Coverage analysis for selective prediction.
-- Bootstrap confidence intervals.
-- t-SNE embedding visualization.
+- Evaluation of CLIP and DINOv2 Vision Foundation Models.
+- Frozen Feature Extraction strategy.
+- End-to-End Fine-Tuning strategy.
+- Image-only and Multimodal Learning strategies.
+- Entire-data and Limited-data experimental settings.
+- Trustworthy AI evaluation with uncertainty and calibration analysis.
+- Risk-coverage assessment and embedding visualization.
 - Fully reproducible experimental pipeline.
 
 
