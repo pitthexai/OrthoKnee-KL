@@ -39,8 +39,8 @@ This GitHub repository contains the official implementation accompanying our stu
 
 ### Repository Structure
 
-<p align="justify">
 
+<p align="justify">
 This repository is organized into modular directories to facilitate reproducibility, readability, and future extension.
 
 </p>
@@ -57,7 +57,6 @@ This repository is organized into modular directories to facilitate reproducibil
 ### Pipeline
 
 <p align="justify">
-
 The proposed computational framework provides a comprehensive and reproducible pipeline for automated knee osteoarthritis (OA) classification from plain radiographs using pretrained Vision Foundation Models (VFMs). The workflow begins with cohort definition and data preparation, followed by region-of-interest (ROI) extraction and standardized image preprocessing to generate consistent model inputs. Binary knee OA classification (KL < 2 versus KL ≥ 2) is then performed using two state-of-the-art pretrained foundation models, CLIP and DINOv2, under both frozen feature extraction and end-to-end fine-tuning strategies. In addition to image-only learning, the framework supports multimodal learning by integrating radiographic images with structured clinical metadata to investigate the complementary value of clinical information for disease classification.
 </p>
 
