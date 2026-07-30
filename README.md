@@ -103,5 +103,11 @@ This study utilizes plain knee radiographs obtained from the Osteoarthritis Init
 
 
 
-## Citation
+### Citation
 
+<p align="center">
+  <a href="https://pitthexai.github.io/index.html" target="_blank">
+    <img src="Figures/Pitthexai_QR.jpg" alt="Support QR Code" width="200"/>
+  </a><br/>
+  <b>Pitt Health + Explainable AI (Pitt HexAI) Research Laboratory</b>
+</p>
