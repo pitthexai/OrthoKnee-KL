@@ -59,11 +59,9 @@ This repository is organized into modular directories to facilitate reproducibil
 <p align="justify">
 
 The proposed computational framework provides a comprehensive and reproducible pipeline for automated knee osteoarthritis (OA) classification from plain radiographs using pretrained Vision Foundation Models (VFMs). The workflow begins with cohort definition and data preparation, followed by region-of-interest (ROI) extraction and standardized image preprocessing to generate consistent model inputs. Binary knee OA classification (KL < 2 versus KL ≥ 2) is then performed using two state-of-the-art pretrained foundation models, CLIP and DINOv2, under both frozen feature extraction and end-to-end fine-tuning strategies. In addition to image-only learning, the framework supports multimodal learning by integrating radiographic images with structured clinical metadata to investigate the complementary value of clinical information for disease classification.
-
 </p>
 
 <p align="justify">
-
 To systematically evaluate model generalizability under realistic clinical scenarios, experiments are conducted using both entire-data and limited-data training settings with validation-based model selection. Beyond conventional classification performance, the proposed framework incorporates a comprehensive trustworthy AI evaluation pipeline, including predictive uncertainty estimation, calibration analysis, risk-coverage assessment, bootstrap confidence intervals, and feature embedding visualization. Together, these components provide a transparent, reliable, and fully reproducible framework for investigating the adaptation of Vision Foundation Models to musculoskeletal imaging applications.
 
 </p>
