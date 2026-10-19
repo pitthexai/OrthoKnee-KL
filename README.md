@@ -65,7 +65,7 @@ To systematically evaluate model generalizability under realistic clinical scena
 </p>
 
 <p align="center">
-<img src="Figures/MIUA_pipeline_V.1.png" width="800"/>
+<img src="Figures/ISBI_pipeline_V.1.png" width="800"/>
 </p>
 
 
