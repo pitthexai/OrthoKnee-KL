@@ -17,7 +17,11 @@
 ### Abstract
 
 <p align="justify">
-This GitHub repository contains the official implementation accompanying our study on the data-efficient and trustworthy adaptation of Vision Foundation Models for knee osteoarthritis (OA) classification from plain radiographs. We present a systematic and reproducible evaluation of adaptation strategies for Vision Foundation Models using 8,950 radiographs from the Osteoarthritis Initiative (OAI). Specifically, we investigate two state-of-the-art pretrained encoders, CLIP and DINOv2, within a unified experimental framework that evaluates <b>(1) data modality (radiographs alone versus radiographs augmented with clinical metadata)</b>, <b>(2) adaptation strategy (frozen feature extraction versus end-to-end fine-tuning)</b>, and <b>(3) supervision regime (entire-data versus limited-data)</b>. Beyond standard classification metrics, the repository includes calibration, uncertainty, and risk-aware selective prediction analyses, providing a reproducible framework for the data-efficient and trustworthy deployment of Vision Foundation Models in musculoskeletal imaging.
+This repository contains the implementation accompanying our study on the data-efficient and trustworthy adaptation of vision and vision–language foundation models for knee osteoarthritis (OA) classification from plain radiographs. Using 8,950 knee radiographs from the Osteoarthritis Initiative (OAI), we systematically evaluate four pretrained models: CLIP, DINOv2, Qwen3-VL, and MedSigLIP.
+
+The experiments investigate three dimensions: (1) adaptation strategy (frozen visual representations versus end-to-end visual fine-tuning), (2) training-data regime (20%, 50%, and 100% of the training data), and (3) input modality (radiographs alone versus radiographs combined with clinical metadata). Model performance is evaluated using accuracy, macro-F1, and ROC-AUC, followed by reliability analyses involving uncertainty estimation, calibration, risk–coverage assessment, and representation visualization.
+
+With full supervision and metadata, Qwen3-VL achieved the highest macro-F1 (0.8626), while MedSigLIP achieved the highest ROC-AUC (0.9367). The results highlight model-dependent differences in adaptation, data efficiency, and the contribution of clinical metadata.
 
 </p>
 
