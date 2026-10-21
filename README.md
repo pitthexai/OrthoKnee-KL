@@ -29,14 +29,14 @@ With full supervision and metadata, Qwen3-VL achieved the highest macro-F1 (0.86
 
 ### Highlights
 
-- Evaluation of CLIP and DINOv2 Vision Foundation Models.
-- Frozen Feature Extraction strategy.
-- End-to-End Fine-Tuning strategy.
-- Image-only and Multimodal Learning strategies.
-- Entire-data and Limited-data experimental settings.
+- Evaluation of CLIP, DINOv2, Qwen3-VL, and MedSigLIP foundation models.
+- Frozen feature extraction and end-to-end visual fine-tuning strategies.
+- Image-only and metadata-augmented classification.
+- Training-data regimes of 20%, 50%, and 100%.
+- Patient-level training, validation, and test splits.
 - Trustworthy AI evaluation with uncertainty and calibration analysis.
-- Risk-coverage assessment and embedding visualization.
-- Fully reproducible experimental pipeline.
+- Risk–coverage assessment and embedding visualization.
+- Reproducible experimental pipeline.
 
 
 
@@ -48,9 +48,9 @@ This repository is organized into modular directories to facilitate reproducibil
 
 </p>
 
-<p align="justify"><strong>Code:</strong> This directory contains all Python scripts and configuration files used for data preprocessing, model training, evaluation, and trustworthy AI analyses.</p>
+<p align="justify"><strong>Code:</strong> This directory contains Python scripts and configuration files used for data preprocessing, model training, evaluation, and trustworthy AI analyses across CLIP, DINOv2, Qwen3-VL, and MedSigLIP.</p>
 <p align="justify"><strong>Dataset:</strong> This directory contains dataset descriptions, clinical metadata, preprocessing information, and data split files associated with the Osteoarthritis Initiative (OAI) dataset. Raw radiographs are not included due to data-sharing restrictions.</p>
-<p align="justify"><strong>Figures:</strong> This directory contains the figures and visualizations generated for the study, including the proposed pipeline, performance plots, uncertainty analyses, calibration diagrams, risk-coverage curves, and embedding visualizations.</p>
+<p align="justify"><strong>Figures:</strong> This directory contains the figures and visualizations generated for the study, including the proposed pipeline, performance plots, uncertainty analyses, calibration diagrams, risk–coverage curves, and embedding visualizations.</p>
 <p align="justify"><strong>Models:</strong> This directory includes trained model checkpoints and configuration files for the CLIP- and DINOv2-based experiments.</p>
 
 
@@ -60,12 +60,11 @@ This repository is organized into modular directories to facilitate reproducibil
 ### Pipeline
 
 <p align="justify">
-The proposed computational framework provides a comprehensive and reproducible pipeline for automated knee osteoarthritis (OA) classification from plain radiographs using pretrained Vision Foundation Models (VFMs). The workflow begins with cohort definition and data preparation, followed by region-of-interest (ROI) extraction and standardized image preprocessing to generate consistent model inputs. Binary knee OA classification (KL < 2 versus KL ≥ 2) is then performed using two state-of-the-art pretrained foundation models, CLIP and DINOv2, under both frozen feature extraction and end-to-end fine-tuning strategies. In addition to image-only learning, the framework supports multimodal learning by integrating radiographic images with structured clinical metadata to investigate the complementary value of clinical information for disease classification.
+The proposed computational framework provides a reproducible pipeline for automated knee osteoarthritis (OA) classification from plain radiographs using pretrained vision and vision–language foundation models. The workflow begins with cohort definition and data preparation, followed by region-of-interest (ROI) extraction and standardized image preprocessing to generate consistent model inputs. Binary knee OA classification (KL &lt; 2 versus KL ≥ 2) is performed using four pretrained foundation models: CLIP, DINOv2, Qwen3-VL, and MedSigLIP. The models are evaluated under frozen feature extraction and end-to-end visual fine-tuning strategies. In addition to image-only learning, the framework supports metadata-augmented classification by integrating radiographic images with age group, sex, and body mass index (BMI).
 </p>
 
 <p align="justify">
-To systematically evaluate model generalizability under realistic clinical scenarios, experiments are conducted using both entire-data and limited-data training settings with validation-based model selection. Beyond conventional classification performance, the proposed framework incorporates a comprehensive trustworthy AI evaluation pipeline, including predictive uncertainty estimation, calibration analysis, risk-coverage assessment, bootstrap confidence intervals, and feature embedding visualization. Together, these components provide a transparent, reliable, and fully reproducible framework for investigating the adaptation of Vision Foundation Models to musculoskeletal imaging applications.
-
+To evaluate data efficiency, experiments are conducted using 20%, 50%, and 100% of the training data, with fixed patient-level validation and test sets. Model checkpoints are selected using validation macro-F1 and subsequently evaluated on the held-out test set using accuracy, macro-F1, and ROC-AUC. Additional trustworthiness analyses are performed on the selected full-data, fine-tuned, image-only MedSigLIP configuration, including predictive uncertainty estimation using Monte Carlo dropout, calibration analysis, risk–coverage assessment, bootstrap confidence interval estimation, and feature embedding visualization.
 </p>
 
 <p align="center">
@@ -78,23 +77,29 @@ To systematically evaluate model generalizability under realistic clinical scena
 ### Dataset
 
 <p align="justify">
-
 This study utilizes plain knee radiographs obtained from the Osteoarthritis Initiative (OAI) database.
-
-
 </p>
 
 
 
 ### Publications
 
-
+- **Data-Efficient and Trustworthy Adaptation of Vision and Vision–Language Foundation Models for Knee Osteoarthritis Classification from Plain Radiographs**  
+  *Manuscript prepared for [IEEE ISBI 2027](https://biomedicalimaging.org/2027/).*
 
 ### Acknowledgments
 
-
+<p align="justify">
+The authors acknowledge the <a href="https://nda.nih.gov/oai/">Osteoarthritis Initiative (OAI)</a> for providing the imaging and clinical data used in this study.
+</p>
 
 ### Citation
+
+<p align="justify">
+If you use this repository, please cite the following manuscript:
+</p>
+
+Rezvani, F., Han, Y., Jiang, J., Sarkheyli-Hägele, A., Abiri, N., Myers, N., Liu, H., Visweswaran, S., Wang, Y., Irrgang, J., Urish, K. L., Musahl, V., Plate, J. F., and Tafti, A. P. "Data-Efficient and Trustworthy Adaptation of Vision and Vision–Language Foundation Models for Knee Osteoarthritis Classification from Plain Radiographs." Manuscript prepared for IEEE ISBI 2027.
 
 <p align="center">
   <a href="https://pitthexai.github.io/index.html" target="_blank">
